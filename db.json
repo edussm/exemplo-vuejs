@@ -1,0 +1,11 @@
+{
+    "tarefas":[
+        {"id":1, "titulo": "tarefa 1", "terminada": false},
+        {"id":2, "titulo": "tarefa 2", "terminada": true},
+        {"id":3, "titulo": "tarefa 3", "terminada": false}
+    ],
+    "usuario":[
+        {"id":1, "nome": "Fulano", "email": "fulano@mail.com"},
+        {"id":2, "nome": "Beltrano", "email": "beltrano@mail.com"}
+    ]
+}

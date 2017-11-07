@@ -16,12 +16,49 @@ vue init browserify-simple exemplo-vuejs
 ## Execução
 
 ``` bash
-# install dependencies
+# Instalar dependências do projeto
 npm install
 
-# serve with hot reload at localhost:8080
+# Inicie o servidor de desenvolvimento, com hot reload em localhost:8080
 npm run dev
 
-# build for production with minification
+# Compile para produção com minificação
 npm run build
+```
+
+## Aula 1
+
+> antes de iniciar, precisamos criar/conseguir uma API que fornecerá os dados e operações para nossa aplicação web. Para facilitar, vamos utilizar o json-server, que é uma aplicacação que simula uma API RESTfull a partir de uma base pré-formatada em um arquivo json.
+
+``` bash
+# Instale o json-server
+npm install -g json-server 
+```
+
+### Utilizando o json-server
+
+> Depois de instalado, crie um arquivo db.json com o conteúdo:
+``` json
+{
+    "tarefas":[
+        {"id":1, "titulo": "tarefa 1", "terminada": false},
+        {"id":2, "titulo": "tarefa 2", "terminada": true},
+        {"id":3, "titulo": "tarefa 3", "terminada": false}
+    ],
+    "usuario":[
+        {"id":1, "nome": "Fulano", "email": "fulano@mail.com"},
+        {"id":2, "nome": "Beltrano", "email": "beltrano@mail.com"}
+    ]
+}
+```
+> Então, execute, na mesma pasta em que o arquivo db.json foi criado:
+``` bash
+json-server --watch db.json
+```
+> Mais informações em: https://github.com/typicode/json-server
+
+### Alterando a execução do projeto para contemplar a inicialização do json-server
+> Acesse o arquivo package.json do projeto e altere o script serve para:
+``` json
+"serve": "json-server --watch db.json --static ./",
 ```
