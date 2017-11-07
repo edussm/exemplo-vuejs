@@ -28,7 +28,7 @@ npm run build
 
 ## Aula 1
 
-> antes de iniciar, precisamos criar/conseguir uma API que fornecerá os dados e operações para nossa aplicação web. Para facilitar, vamos utilizar o json-server, que é uma aplicacação que simula uma API RESTfull a partir de uma base pré-formatada em um arquivo json.
+> Antes de iniciar, precisamos criar/conseguir uma API que fornecerá os dados e operações para nossa aplicação web. Para facilitar, vamos utilizar o json-server, que é uma aplicacação que simula uma API RESTfull a partir de uma base pré-formatada em um arquivo json.
 
 ``` bash
 # Instale o json-server
@@ -58,7 +58,12 @@ json-server --watch db.json
 > Mais informações em: https://github.com/typicode/json-server
 
 ### Alterando a execução do projeto para contemplar a inicialização do json-server
+> Adicione a dependência de desenvolvimento:
+``` bash
+npm install --save-dev json-server
+```
+
 > Acesse o arquivo package.json do projeto e altere o script serve para:
 ``` json
-"serve": "json-server --watch db.json --static ./",
+"serve": "json-server --watch db.json --port 8080 --static ./",
 ```
