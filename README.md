@@ -67,3 +67,19 @@ npm install --save-dev json-server
 ``` json
 "serve": "json-server --watch db.json --port 8080 --static ./",
 ```
+
+## Aula 2
+> Antes de começar a desenvolver, installe o vue-devtools:
+
+- [Exensão do Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+
+- [Addon do Firefox](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
+
+Veja orientações em: https://github.com/vuejs/vue-devtools
+
+> Link de apoio: https://br.vuejs.org/v2/guide/instance.html
+
+> Novas dependências
+``` bash
+npm install --save vue-router vue-resource bootstrap
+```
